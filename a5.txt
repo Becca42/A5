@@ -18,15 +18,39 @@ Teamwork
   to these rules might improve the functioning of
   your team in A6?
 
+Our ground rules are the expectation that everyone completes their assigned 
+tasks before each meeting and that everyone attends scheduled meetings (or 
+gives the group notice if they cannot attend).
+
+We could stand to be more clear on when tasks should be completed; during the
+design phase it was not always clearly stated.
+
 * How is everyone encouraged to stay accountable to the
   tasks they have been assigned?
+
+Because we meet 3x a week, we can check in on everyone's progress. At meetings
+we go over what everyone has accomplished so that everyone is up to date. 
+This also has the effect of encouraging people to complete their tasks.
 
 * What conflicts have arisen within your team? How (if at
   all) have the conflicts been resolved? What could you do
   to improve your team's ability to deal productively with
   conflict?
 
+We have had no serious conflicts thus far. The only conflicts we have had were
+either scheduling or ideallogical. Scheduling have been easily resolved and
+should remain easy to solve. Ideallogical conflicts, though more complicated
+to resolve have not prevented progress, and are probably good for the overall
+soundness of our code and implementation.
+
 * How do your meetings typically proceed? What do you
   accomplish and in how much time? What is effective about
   your team functioning during meetings? What changes would
   improve your meetings?
+
+Meetings are scheduled for 2 hours and tend to last 1-2 hours. Meetings 
+generally begin by going over what each member has accomplished independently
+since the previous meeting to catch everyone up and make sure each part is
+implemented soundly and will integrate with the rest of the system. Meetings
+are also spent making overall design decisions, and previously writing up 
+documentation and making diagrams to submit.
