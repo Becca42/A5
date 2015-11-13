@@ -36,10 +36,15 @@ let fork_test (d:'a Deferred.t) (f1: 'a -> 'b Deferred.t) (f2:'a -> 'c Deferred.
  * It should call f on every element of xs immediately; it should not wait
  * until one call completes before starting the next.*)
 let rec parallel_map (f:'a -> 'b Deferred.t) (l: 'a list) : 'b list Deferred.t =
-  match l with
-  | [] -> return []
-  | hd :: tl -> Deferred.bind (f hd) (fun x ->
-    Deferred.bind (parallel_map f tl) (fun y -> return (x :: y )))
+  let mapped = List.map f l in
+  (*returns an 'a list deferred.t from 'b deferred.t list xs*)
+  let rec helper xs =
+    match xs with
+    | [] -> return []
+    | hd :: tl  -> Deferred.bind hd ((fun x -> Deferred.bind (helper tl)
+      (fun y -> return (x :: y ))))
+  in
+  helper mapped
 
 (**[sequential_map f xs] is similar to [List.map f xs]: it should apply [f] to
  * every element of [xs], and return the list of results.
